@@ -1,3 +1,5 @@
+from typing import Optional
+
 from pydantic import BaseModel
 
 class OpenAIConfig(BaseModel):
@@ -7,3 +9,4 @@ class OpenAIConfig(BaseModel):
     temperature: float = 0.0
     presence_penalty: float = 0.0
     frequency_penalty: float = 0.0
+    prompt: Optional[str] = None
